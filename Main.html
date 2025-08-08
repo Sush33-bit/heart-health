@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIRST AID KIT </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #efe5e5df;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #efe5e5df;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h1 {
+            background-color: #0703f5;
+            color: #f30808;
+            margin-bottom: 20px;
+            font-size: 36px;
+            position: relative;
+            background: linear-gradient(90deg, #fa4008); /* Use a gradient for a darker and brighter effect */
+            -webkit-background-clip: text; /* Clip the text to the background gradient */
+            -webkit-text-fill-color: transparent; /* Make the text transparent */
+        }
+        
+        button {
+            padding: 20px 30px; /* Increase padding for height */
+            font-size: 18px;
+            background-color: #0703f5; /* Change button color to red */
+            color: #fff;
+            border: none;
+            border-radius: 8px; /* Add border-radius for a rounded shape */
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 10px;
+            display: inline-block;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 150px;
+        }
+        
+        button:hover {
+            background-color: #c9302c; /* Change hover color to a darker red */
+        }
+        .first-aid-kit {
+            font-size: 24px;
+            color: #ffffff; /* Change FIRST AID KIT color to white */
+            background-color: #007bff; /* Change background color to blue */
+            padding: 10px 20px; /* Adjust padding */
+            border-radius: 5px; /* Add border-radius */
+            display: inline-block; /* Make it inline-block to fit the text */
+            margin-top: 20px; /* Adjust margin */
+        }
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center; /* Align items vertically */
+            margin-top: 20px; /* Adjust margin */
+        }
+        .image-container img {
+            max-width: 100%;
+            height: 150px;
+            width: 200px; /* Set width to 200px for rectangle shape */
+            object-fit: cover; /* Maintain aspect ratio and cover container */
+            border-radius: 175px;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 style="color: #f50505; font-size: 36px; margin-top: 20px;  background-color: #f90909;">FIRST AID KIT</h1>
+        <div class="image-container">
+            <img src="/python/professioanl.webp" alt="Image 1">
+        </div>
+        <button id="emergencyButton">Emergency</button>
+        <button id="checkUpButton">Checkup</button>
+    </div>
+    <script>
+        document.getElementById('emergencyButton').addEventListener('click', function() {
+            // Redirect to the emergency page
+            window.location.href = 'emergency.html';
+        });
+
+        document.getElementById('checkUpButton').addEventListener('click', function() {
+            // Open a new window
+            window.open('checkupfile.html', '_blank');
+        });
+    </script>
+</body>
+</html>

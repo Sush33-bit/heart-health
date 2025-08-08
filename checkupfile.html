@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkup Parameters</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            width: 100%;
+            max-width: 400px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        .button-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 10px;
+            justify-items: center;
+            margin-top: 20px;
+        }
+        button {
+            padding: 12px 24px;
+            font-size: 16px;
+            font-weight: bold;
+            background-color: #02bef8;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: 100%;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        button:hover {
+            background-color: #d91919;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Checkup Parameters</h2>
+        <div class="button-container">
+            <button id="ageButton">Age</button>
+            <button id="sexButton">Sex</button>
+            <button id="restingBPButton">Resting BP</button>
+            <button id="cholesterolButton">Cholesterol</button>
+            <button id="fastingBSButton">FastingBS</button>
+            <button id="maxHRButton">MaxHR</button>
+            <button id="exerciseAnginaButton">ExerciseAngina</button>
+            <button id="heartDiseaseButton">Heart Disease</button>
+        </div>
+    </div>
+    <script>
+        // Handle button clicks here
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHECK PULSE RATE</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2eaea;
+            text-align: center;
+        }
+        video {
+            margin-top: 1px;
+            max-width: 80%;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: none; /* Hide the video initially */
+        }
+        .image {
+            display: block; /* Show the image by default */
+            margin: 0 auto; /* Center align the image */
+            width: 40%; /* Set the width of the image */
+            height: 300px; /* Maintain aspect ratio */
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .button {
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="color: #71f505; font-size: 36px; margin-top: 20px;  background-color: #010811;">CHECK PULSE RATE</h1>
+    <img src="/python/HHH.jpg" alt="Unconscious Image" class="image">
+    <button id="playButton" class="button" onclick="playVideo()">Next</button>
+
+    <script>
+        function playVideo() {
+            var videoUrl = '/python/Chest Compressions (CPR Steps) copy.mp4';
+            window.open(videoUrl, '_blank'); // Open video in new window
+        }
+    </script>
+</body>
+</html>
