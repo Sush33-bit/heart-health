@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIRST AID KIT</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 200px;
+            font-size: 36px;
+            position: relative;
+        }
+        .heart {
+            font-size: 48px;
+            color: #d9534f;
+        }
+        button {
+            padding: 30px 40px; /* Increase padding for height */
+            font-size: 20px;
+            background-color: #d9534f;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 20px;
+            display: inline-block;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: absolute;
+            left: 90px; /* Shift button to the left side */
+            top: 50%; /* Center button vertically */
+            transform: translateY(-50%);
+            width: 200px;
+            height: 200px; /* Increase button height */
+        }
+        
+        .check-up-button {
+            padding: 30px 40px; /* Increase padding for height */
+            font-size: 20px;
+            background-color: #d9534f; /* Use the same background color as the Emergency button */
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 20px;
+            display: inline-block;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: absolute;
+            left: 350px; /* Position the button to the right side */
+            top: 50%; /* Center button vertically */
+            transform: translateY(-50%);
+            width: 200px;
+            height: 200px; /* Increase button height */
+        }
+
+        button:hover {
+            background-color: #c9302c;
+        }
+        .first-aid-kit {
+            position: absolute;
+            top: -50px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: px;
+            color: #d9534f;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <span class="first-aid-kit">&#128681;</span>
+        <h1><span class="heart">&#10084;</span> FIRST AID KIT</h1>
+        <button id="emergencyButton">Emergency</button>
+        <button id="checkUpButton" class="check-up-button">Check Up</button>
+    </div>
+    <script>
+        document.getElementById('emergencyButton').addEventListener('click', function() {
+            // Redirect to the emergency page
+            window.location.href = 'emergency.html';
+        });
+
+        document.getElementById('checkUpButton').addEventListener('click', function() {
+            var pulseRate = prompt('Enter your pulse rate:');
+            if (pulseRate !== null) {
+                pulseRate = parseInt(pulseRate); // Convert input to integer
+                if (pulseRate >= 60 && pulseRate <= 100) {
+                    alert('Your pulse rate is normal. Better condition.');
+                } else {
+                    alert('Your pulse rate is ' + pulseRate + '. Consult a doctor.');
+                }
+            }
+        });
+    </script>
+</body>
+</html>

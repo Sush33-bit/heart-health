@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIRST AID KIT &#10084;</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 36px;
+            position: relative;
+            background: linear-gradient(90deg, #333, #d9534f); /* Use a gradient for a darker and brighter effect */
+            -webkit-background-clip: text; /* Clip the text to the background gradient */
+            -webkit-text-fill-color: transparent; /* Make the text transparent */
+        }
+        .heart {
+            font-size: 24px;
+            color: #d9534f; /* Change heart color to red */
+        }
+        button {
+            padding: 20px 30px; /* Increase padding for height */
+            font-size: 18px;
+            background-color: #d9534f; /* Change button color to red */
+            color: #fff;
+            border: none;
+            border-radius: 8px; /* Add border-radius for a rounded shape */
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 20px;
+            display: inline-block;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 200px;
+        }
+        
+        button:hover {
+            background-color: #c9302c; /* Change hover color to a darker red */
+        }
+        .first-aid-kit {
+            font-size: 24px;
+            color: #d9534f; /* Change FIRST AID KIT color to red */
+        }
+        .image-container {
+            display: none; /* Hide the image container by default */
+            justify-content: center;
+            align-items: center; /* Align items vertically */
+            margin-top: 50px;
+        }
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            margin: 0 10px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>FIRST AID KIT <span class="heart">&#10084;</span></h1>
+        <button id="emergencyButton" onclick="showImage()">Unconscious</button>
+        <div class="image-container" id="imageContainer">
+            <img src="/python/unconscious-image.jpg" alt="Unconscious Image">
+            <button onclick="playVideo()">Next</button>
+        </div>
+    </div>
+    <script>
+        function showImage() {
+            document.getElementById('imageContainer').style.display = 'flex'; // Show the image container
+        }
+
+        function playVideo() {
+            window.open('https://www.example.com/your-video-url', '_blank'); // Open the video in a new window
+        }
+    </script>
+</body>
+</html>

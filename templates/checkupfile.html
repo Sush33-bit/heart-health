@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Attack Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input[type="text"], select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            background-color: #02bef8;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #d91919;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Heart Attack Prediction</h2>
+        <form id="heartAttackForm" action="/predict" method="post">
+            <label for="age">Age:</label>
+            <input type="text" id="age" name="age" required>
+
+            <label for="sex">Sex:</label>
+            <select id="sex" name="sex" required>
+                <option value="0">Male</option>
+                <option value="1">Female</option>
+            </select>
+
+            <label for="restingBP">Resting BP:</label>
+            <input type="text" id="restingBP" name="restingBP" required>
+
+            <label for="cholesterol">Cholesterol:</label>
+            <input type="text" id="cholesterol" name="cholesterol" required>
+
+            <label for="fastingBS">Fasting BS:</label>
+            <select id="fastingBS" name="fastingBS" required>
+                <option value="0">Less than or equal to 120 mg/dl</option>
+                <option value="1">Greater than 120 mg/dl</option>
+            </select>
+
+            <label for="maxHR">MaxHR:</label>
+            <input type="text" id="maxHR" name="maxHR" required>
+
+            <label for="exerciseAngina">Exercise Angina:</label>
+            <select id="exerciseAngina" name="exerciseAngina" required>
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>
